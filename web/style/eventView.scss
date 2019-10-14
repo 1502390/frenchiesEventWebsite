@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+$bg : #712177;
+$fg: #F2F2F2;
+$border-width: 3px;
+$corner-size: 3rem;
+$dur: 0.65s;
+
+*{
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+body, html{
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F2F2F2;
+}
+
+.eventView__container{
+  margin-top: 8rem;
+}
+
+.eventView__back{
+  width: 0;
+  position: absolute;
+  top: 8rem;
+  left: 8rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10rem;
+  color: #712177;
+}
+
+.text h1 {
+    animation:
+        slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
+        fadeIn .25s .5s ease-in both;
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.infoContainerName {
+  text-align: justify;
+  display: flex;
+  border: 3px solid #712177;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-right: 15rem;
+  margin-bottom: 5rem;
+  width: auto;
+  justify-content: center;
+}
+
+.infoContainerName h2{
+  display: inline-block;
+  margin: 2rem;
+  color: #712177;
+}
+
+.infoContainerDescription {
+  text-align: justify;
+  display: inline-block;
+  border: 3px solid #712177;
+  // margin-top: 5rem;
+  margin-left: 3rem;
+  margin-right: 5.5rem;
+  // margin-bottom: 5rem;
+  width: 50%;
+  float: left;
+  justify-content: left;
+}
+
+.infoContainerDescription h2{
+  display: inline-block;
+  margin: 2rem;
+  color: #712177;
+}
+
+.infoContainerStaff {
+  text-align: justify;
+  display: inline-block;
+  border: 3px solid #712177;
+  // margin-top: 5rem;
+  // margin-left: 15rem;
+ margin-right: 6rem;
+  // margin-bottom: 5rem;
+  width: auto;
+  justify-content: left;
+}
+
+.infoContainerStaff h2{
+  display: flex;
+  margin: 2rem;
+  color: #712177;
+}
+
+.bigContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.name{
+  font-weight: 600;
+  padding-right: 3rem;
+}
+
+#eventImage{
+  height: 500px;
+  width: 100%;
+  background-image: url("../img/event.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 200px;
+}
+
+@keyframes slideUp {
+    from {transform: translateY(200%);}
+    to {transform:translateY(-50%);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.center-buttons {
+  display: flex;
+  float: right;
+}
+
+.button-text {
+  position: relative;
+  color: $bg;
+  z-index: 2;
+}
+
+.button {
+  margin: 3rem 15.5rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background: transparent;
+  border: $border-width solid currentColor;
+  padding: 1.5rem 2rem;
+  width: 20vw;
+  height: 20vh;
+  font-size: 22px;
+  color: $fg;
+  position: relative;
+  transition: color $dur;
+
+  &:hover {
+    color: $bg;
+    &::before { width: 0; }
+    &::after { height: 0; }
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    background: $fg;
+    z-index: 1;
+    transition: all $dur;
+  }
+  //the 101% is because of a pixel rounding issue in firefox
+  &::before {
+    width: calc(100% - #{$corner-size});
+    height: calc(101% + #{$border-width * 2});
+    top: -$border-width;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    height: calc(100% - #{$corner-size});
+    width: calc(101% + #{$border-width * 2});
+    left: -$border-width;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+.underline-left {
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -3px;
+    height: 2px;
+    background-color: $bg;
+    width: 0;
+    transition: .4s;
+  }
+}
