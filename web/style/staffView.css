@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+* {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  font-weight: 400; }
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F2F2F2; }
+
+.eventView__container {
+  margin-top: 8rem; }
+
+.eventView__back {
+  width: 0;
+  position: absolute;
+  top: 8rem;
+  left: 8rem;
+  transition: 0.5s ease;
+  cursor: pointer; }
+
+.text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10rem;
+  color: #712177; }
+
+.text h1 {
+  animation: slideUp 0.75s 0.5s cubic-bezier(0.17, 0.88, 0.32, 1.27) both, fadeIn 0.25s 0.5s ease-in both;
+  padding: 0 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 600; }
+
+.infoContainer {
+  text-align: justify;
+  display: flex;
+  border: 3px solid #712177;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  width: 20%;
+  justify-content: center; }
+
+.infoContainer h2 {
+  display: inline-block;
+  margin: 2rem;
+  color: #712177; }
+
+.infoContainerAvailability {
+  display: flex;
+  border: 3px solid #712177;
+  margin-right: 5.5rem;
+  margin-bottom: 3rem;
+  width: auto;
+  justify-content: center; }
+
+.infoContainerAvailability h2 {
+  display: inline-block;
+  margin: 2rem;
+  color: #712177; }
+
+.infoContainerTask {
+  text-align: justify;
+  display: inline-block;
+  border: 3px solid #712177;
+  margin-right: 6rem;
+  width: 20%;
+  justify-content: center; }
+
+.infoContainerTask h2 {
+  display: flex;
+  margin: 2rem;
+  color: #712177; }
+
+.bigContainer {
+  display: flex;
+  justify-content: center; }
+
+.name {
+  font-weight: 600;
+  padding-right: 3rem; }
+
+#eventImage {
+  height: 500px;
+  width: 100%;
+  background-image: url("../img/event.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 200px; }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(200%); }
+  to {
+    transform: translateY(-50%); } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.center-buttons {
+  display: flex;
+  float: right; }
+
+.button-text {
+  position: relative;
+  color: #712177;
+  z-index: 2; }
+
+.button {
+  margin: 3rem 15.5rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background: transparent;
+  border: 3px solid currentColor;
+  padding: 1.5rem 2rem;
+  width: 20vw;
+  height: 20vh;
+  font-size: 22px;
+  color: #F2F2F2;
+  position: relative;
+  transition: color 0.65s; }
+  .button:hover {
+    color: #712177; }
+    .button:hover::before {
+      width: 0; }
+    .button:hover::after {
+      height: 0; }
+  .button::before, .button::after {
+    content: '';
+    position: absolute;
+    background: #F2F2F2;
+    z-index: 1;
+    transition: all 0.65s; }
+  .button::before {
+    width: calc(100% - 3rem);
+    height: calc(101% + 6px);
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .button::after {
+    height: calc(100% - 3rem);
+    width: calc(101% + 6px);
+    left: -3px;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.underline-left {
+  position: relative; }
+  .underline-left:hover, .underline-left:focus, .underline-left:active {
+    cursor: pointer; }
+    .underline-left:hover:after, .underline-left:focus:after, .underline-left:active:after {
+      width: 100%; }
+  .underline-left:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: #712177;
+    width: 0;
+    transition: .4s; }
+
+/*# sourceMappingURL=staffView.css.map */
