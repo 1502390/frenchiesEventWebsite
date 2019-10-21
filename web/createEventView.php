@@ -6,24 +6,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Event Manager</title>
     <link rel="stylesheet" type="text/css" href="style/header.css">
-    <link rel="stylesheet" type="text/css" href="style/eventView.css">
+    <link rel="stylesheet" type="text/css" href="style/createEventView.css">
   </head>
   <body>
       <?php
         include 'header.php';
       ?><br><br><br><br>
-    <h1>Create an event</h1>
-    <form name="createEvent" action="create.php" onsubmit="return validateForm()" method="POST">
-      Name of the event:<br>
-      <input type="text" name="name" id="name"><br>
-      Description:<br>
-      <input type="text" name="description" id="description"><br>
-      Date:<br>
-      <input type="date" name="date" id="date"><br>
-      Location:<br>
-      <input type="text" name="location" id="location"><br>
-      <input type="submit" value="Create">
-    </form>
+
+    <div class="container">
+
+      <h1>Create an event</h1>
+
+      <form name="createEvent" action="create.php" onsubmit="return validateForm()" method="POST">
+
+        <div class="inputDiv">
+          Name of the event: <input type="text" name="name" id="name" class="input">
+        </div>
+        <div class="inputDiv">
+          Description: <input type="text" name="description" id="description" class="input">
+        </div>
+        <div class="inputDiv">
+          Date: <input type="date" name="date" id="date" class="input">
+        </div>
+        <div class="inputDiv">
+          Location: <input type="text" name="location" id="location" class="input">
+        </div>
+        <input type="submit" value="Create">
+      </form>
+
+    </div>
 
     <script>
       function validateForm() {
