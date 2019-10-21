@@ -39,7 +39,20 @@
 
 
   }
+  function staffPageChange(id){
+    //var staffList = document.getElementById("staff");
+    // for (i=0; i < staffList.length; i++){
+    //   if(id == )
+    // }
+    //
+    var linkC = id;
+    linkC.addEventListener('click', function() {
+      document.location.href = 'staffView.php?' + linkC.innerText ;
+    });
+  }
   </script>
+
+
   <div id = "eventImage">
    <!-- <img src="img/event.jpg" alt="Event Image" > -->
   </div>
@@ -58,10 +71,10 @@
       <div class = "infoContainerStaff">
         <h2 class="name"> Event Staff </h2>
         <ul id = "staff" style = "list-style-type:none;">
-          <li> <h2> John Doe </h2> </li>
-          <li> <h2> Jane Doe </h2> </li>
-          <li> <h2> John Doe </h2> </li>
-          <li> <h2> Jane Doe </h2> </li>
+          <li> <a id="staff1" href="javascript:void();" onclick="staffPageChange(this)" > John Doe </a> </li>
+          <li> <a id="staff2" href="javascript:void();" onclick="staffPageChange(this)" > Jane Doe </a> </li>
+          <li> <a id="staff3" href="javascript:void();" onclick="staffPageChange(this)" > John Doe </a> </li>
+          <li> <a id="staff4" href="javascript:void();" onclick="staffPageChange(this)" > James Doe </a> </li>
         </ul>
       </div>
 
@@ -81,6 +94,5 @@
       </a>
     </div>
 
-    <script type="text/javascript" src="scripts/header.js"></script>
   </body>
   </html>

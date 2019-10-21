@@ -43,7 +43,7 @@ body, html {
   border: 3px solid #712177;
   margin-right: 3rem;
   margin-bottom: 3rem;
-  width: 20%;
+  width: auto;
   justify-content: center; }
 
 .infoContainer h2 {
@@ -78,8 +78,16 @@ body, html {
   color: #712177; }
 
 .bigContainer {
+  margin-right: 5rem;
+  margin-top: 3rem;
+  justify-content: center; }
+
+.bigContainerLists {
   display: flex;
   justify-content: center; }
+
+.superContainer {
+  display: flex; }
 
 .name {
   font-weight: 600;
@@ -91,8 +99,7 @@ body, html {
   background-image: url("../img/event.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-attachment: local;
   margin-bottom: 200px; }
 
 @keyframes slideUp {
