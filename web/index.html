@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <!-- Title for the page -->
+  <title>RGU Events</title>
+  <meta http-equiv="content-type"
+  content="text/html;charset=utf-8" />
+
+  <!-- Added relavant links to the fonts etc -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/RGU.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/clear-sans" type="text/css"/>
+
+  <!-- Link to JQUERY on google api list -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Link to scripts js file -->
+  <script src="js/script.js"></script>
+  <!-- <script type="text/javascript" src="***"></script> -->
+
+</head>
+
+<!-- Open Body -->
+<body>
+  <div id="top"><!-- TOP BAR -->
+    <!-- Image and Login for top bar  -->
+    <img class="headerImage" style="vertical-align:middle; float:left;" src="img/RGU_SMALL.png" alt="RGU Logo" />
+    <span class="loginLink">&#x26BF; Login</span>&nbsp;
+  </div><!-- End of TOP BAR -->
+  <div class="main" id="main">
+
+    <br />
+    <div class="header">
+      <h1>Events</h1> <!-- Event Header -->
+    </div>
+
+    <!-- Start Flex container  -->
+    <div class="flex-container">
+      <!-- First container Item -->
+        <figure class="flex-item">
+          <p><img class=scaled src="img/event.jpg" alt="Event"> <!-- image to show (harcoded for now will change) -->
+            <figcaption>EVENT NAME</figcaption> <!--Caption for event -->
+        </figure>
+        <figure class="flex-item">
+          <p><img class=scaled src="img/event.jpg" alt="Event">
+            <figcaption>EVENT NAME</figcaption>
+        </figure>
+        <figure class="flex-item">
+          <p><img class=scaled src="img/event.jpg" alt="Event">
+            <figcaption>EVENT NAME</figcaption>
+        </figure>
+        <figure class="flex-item addEvent" onclick="addEvent()">
+          <p><img class=scaled src="img/plus.png" alt="Add Event">
+        </figure>
+    </div>
+
+
+      </div><!-- main -->
+
+      <!-- Hidden login form -->
+      <div class="login" id="win_top"></div>
+      <!-- --- -->
+      <br />
+      <!-- Hidden "popup" element -->
+      <div class="input_popup hidden"></div>
+      <!-- --- -->
+      <footer>
+        Copyright &copy;2019 The Robert Gordon University.<br />
+      </footer>
+    </body>
+    </html>
