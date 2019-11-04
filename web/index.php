@@ -1,3 +1,18 @@
+<?php
+	include 'db.php';
+	include 'utils.php';
+
+	init_session();
+
+	$db = db_connect();
+	if (!$db)
+	{
+		error_message("ERROR: Could not connect to database: " . mysqli_connect_error());
+		exit();
+	}
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
